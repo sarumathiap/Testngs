@@ -1,0 +1,33 @@
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="softwaretesting">
+ <listeners>
+        <listener class-name="suite.ListenersTest"/>
+    </listeners>
+ <parameter name="author" value="Guru99"></parameter>
+  <parameter name="searchKey" value="India"></parameter>
+ <test name="testngTest">
+  <parameter name="searchKey" value="UK"></parameter>
+ <groups>
+ <run>
+ 
+ <exclude name="smokeTest"></exclude>
+  <exclude name="functionalTest"></exclude>
+   <exclude name="skip"></exclude>
+   <exclude name="arithmetic"></exclude>
+   
+ </run>
+ </groups>
+
+ <classes>
+
+  <class name="skiptest.SkipError" />
+   <class name="skiptest.Parameter" />
+    <class name="skiptest.Dataparams" />
+    <class name="suite.ListenersTestng"></class>
+  <class name="Groups.Group" />
+  <class name="suite.Arithmetic" />
+    <class name="Groups.Depends" />
+ </classes>
+ </test>
+</suite>
